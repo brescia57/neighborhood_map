@@ -3,14 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, intitial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
+    <title>Neighborhood Map</title>
   </head>
   <body>
+    <div class="container">
+      <div class="options">
+        <h1>Some Local Favorites!</h1>
+        <div>
+          <input id="show-food" data-bind="text: showFood" type="button" value="Show Food">
+          <input id="hide-food" data-bind="text: hideFood" type="button" value="Hide Food">
+          <hr>
+        </div>
+        <div class="yelp-search">
+          <form class="inputs" data-bind="submit: updateYelps">
+            <input type="text" class="form" data-bind="value: searches">
+            <span class="input-group-btn"></span>
+          </form>
+        </div>
+        <ul class="results"></ul>
+      </div>
+      <div id="map"></div>
+    </div>
     
-    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUhx2mCMlWCMiVCwCwkaVMueqbCCSlYPM&libraries=geomerty,drawing,places&v=3&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUhx2mCMlWCMiVCwCwkaVMueqbCCSlYPM&libraries=geometry,drawing,places,visualization&v=3&callback=initMap">
     </script>
+    <script type="text/javascript" src="js/knockout.js"></script>
   </body>
 </html>
