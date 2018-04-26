@@ -6,9 +6,8 @@ var map;
 var markers = [];
 
 var clientID = 'JHJQ23XA1HX0ODEAUZRDXC3YLHSWMH45FTBA45H01031RMQ3';
-//'OxfUCyWyBmScEzS5RWExCg';
 var clientSecret = 'WCWRQTUIOED5Y23S3TCMDUVHSZIUWQMNPALN5FE4CX34G4U2';
-//'r8tb-Bo8uQSOf9qLMYcAHjlPEK07XkbfWfu03PjSSqo9pKp0HRTBlFFQPJ3wXv1f8KkQlML65oXZmceNlSuuoriZyhZTC7XK4vXI6h1THCAzc6sxJGr3-qXo19DUWnYx';
+
 
 function initMap(){
 	var styles = [

@@ -75,6 +75,33 @@ h1{
 
 /* Media Queries */
 
+@media all and (min-width: 70em){
+	.options{
+		max-width: 100%;
+		width: 30%;
+	}
+	#map{
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+@media all and (min-width: 35em) and (max-width: 47em){
+	.options{
+		max-width: 30%;
+		width: 30%;
+		font-size: 16px;
+	}
+	.food-item{
+		font-size: 16px;
+		padding: 0px;
+		margin: auto;
+	}
+	#map{
+		width: 100%;
+		max-width: 100%;
+	}
+}
 @media all and (min-width: 50em){
 	.options{
 		width: 25%;
@@ -82,6 +109,23 @@ h1{
 	}
 	#map{
 		width: 100%;
-		float: none;
+		max-width: 100%;
+	}
+}
+
+@media all and (min-width: 13em) and (max-width: 34em){
+	.options{
+		max-width: 30%;
+		width: 30%;
+		font-size: 12px;
+	}
+	.food-item{
+		font-size: 12px;
+		padding: 0px;
+		margin: auto;
+	}
+	#map{
+		width: 100%;
+		max-width: 100%;
 	}
 }
