@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 //Model
 var map;
@@ -7,6 +7,17 @@ var markers = [];
 
 var clientID = 'JHJQ23XA1HX0ODEAUZRDXC3YLHSWMH45FTBA45H01031RMQ3';
 var clientSecret = 'WCWRQTUIOED5Y23S3TCMDUVHSZIUWQMNPALN5FE4CX34G4U2';
+
+//Array of locations
+var locations = [
+	{title: "Spicy & Tasty", location: {lat: 40.7593180,lng: -73.8320170}},
+	{title: "Little Sheep Mongolian", location: {lat: 40.7622730,lng: -73.8290410}},
+	{title: "Joe's Shanghai", location: {lat: 40.7619080,lng: -73.8303750}},
+	{title: "Lucia's Pizza", location: {lat: 40.7602830,lng: -73.8281540}},
+	{title: "Hahm Ji Bach", location: {lat: 40.7631030,lng: -73.8149240}},
+	{title: "Kimganae Korean Restaurant", location: {lat: 40.7607320,lng: -73.8268920}},
+	{title: "PappaRich", location: {lat: 40.7595570,lng: -73.8323920}}
+];
 
 
 function initMap(){
@@ -29,7 +40,7 @@ function initMap(){
 			elementType: 'labels.text.fill',
 			stylers: [{color: '#d59563'}]
 		}
-	]
+	];
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat:40.767499, lng:-73.833079},
 		zoom: 13,
@@ -93,20 +104,11 @@ function initMap(){
 	ko.applyBindings(new ViewModel());
 }
 
-//Array of locations
-var locations = [
-	{title: "Spicy & Tasty", location: {lat: 40.7593180,lng: -73.8320170}},
-	{title: "Little Sheep Mongolian", location: {lat: 40.7622730,lng: -73.8290410}},
-	{title: "Joe's Shanghai", location: {lat: 40.7619080,lng: -73.8303750}},
-	{title: "Lucia's Pizza", location: {lat: 40.7602830,lng: -73.8281540}},
-	{title: "Hahm Ji Bach", location: {lat: 40.7631030,lng: -73.8149240}},
-	{title: "Kimganae Korean Restaurant", location: {lat: 40.7607320,lng: -73.8268920}},
-	{title: "PappaRich", location: {lat: 40.7595570,lng: -73.8323920}}
-];
+
 
 function populateInfoWindow(marker, infowindow){
 	if(infowindow.marker != marker){
-		infowindow.marker = marker;
+		infowindow.marker == marker;
 		
 		//FourSquare Api
 		//the ll in the link refers to the latitude and longitude
@@ -120,7 +122,7 @@ function populateInfoWindow(marker, infowindow){
 		infowindow.setContent('<div>' +marker.title+ '<div><strong>FourSquare Link: </strong>' + '<a href="' + fsquare + '">' + fsqResponse.name + '</a></div>' +
 			'<div><strong>Address: </strong>' + fsqResponse.location.formattedAddress + '</div></div>');
 		infowindow.open(map, marker);
-	})
+	});
 		infowindow.addListener('closeclick', function(){
 			infowindow.marker = null;
 		});
@@ -131,6 +133,8 @@ function populateInfoWindow(marker, infowindow){
 
 
 
+
+//makeMarkerIcon
 function makeMarkerIcon(markerColor){
 		var markerImage = new google.maps.MarkerImage(
 			'http://chart.googleapis.com/chart?chst=d_map_spin&chld=1.15|0|'+ markerColor +
@@ -142,6 +146,7 @@ function makeMarkerIcon(markerColor){
 		);
 		return markerImage;
 	}
+
 var Places = function(data){
 	this.title = ko.observable(data.title);
 	this.lat = ko.observable(data.location.lat);
