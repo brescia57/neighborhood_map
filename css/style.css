@@ -1,6 +1,6 @@
 html,
 body{
-	font-family: Arial, sans-serif;
+	font-family: Arial;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -9,14 +9,16 @@ body{
 .container{
 	height: 100%;
 	position: relative;
+
 }
 
 #map{
 	height: 100%;
 	bottom: 0px;
 	left: 362px;
-	position: absolute;
 	right: 0px;
+	position: relative;
+	overflow: hidden;
 	width: 100%;
 }
 
@@ -25,7 +27,7 @@ input{
 }
 
 h1{
-	color: 525454;
+	color: #525454;
 	font-size: 22px;
 	margin: 0 0 10px 0;
 	text-align: center;
@@ -38,7 +40,8 @@ h1{
 	height: 100%;
 	line-height: 35px;
 	padding: 10px 10px 30px 10px;
-	text-align: left;
+	text-align: center;
+	display: block;
 	width: 340px;
 	position: absolute;
 	overflow: auto;
@@ -47,9 +50,9 @@ h1{
 .search-spot{
 	border-radius: 1.2em;
 	height: 30px;
-	width: 80%;
+	width: 84%;
 	padding: 10px;
-	font-style: sans-serif;
+
 	font-size: 12px;
 	border-style: solid;
 }

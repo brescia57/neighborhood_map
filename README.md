@@ -1,10 +1,11 @@
 # neighborhood_map
 
 ## About
-	<p>This is a Neighborhood Map project as part of the Udacity Fullstack Nanodegree program.  It is a map of a neighborhood in Flushing, New York, showcasing some good places to eat at a decent price.</p>
+	-This is a Neighborhood Map project as part of the Udacity Fullstack Nanodegree program.  It is a map of a neighborhood in Flushing, New York, showcasing some good places to eat at a decent price.
 
 ## Getting the files
 	-The repository can be cloned or downloaded [here](https://github.com/brescia57/neighborhood_map).
+	-After downloading/cloning the repository, open the folder and click on index.html to launch the application.
 
 ## Tools That Were Used
 	-Google Maps API
